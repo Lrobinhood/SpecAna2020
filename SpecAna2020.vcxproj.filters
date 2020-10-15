@@ -1,0 +1,114 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="Header Files">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h;hpp;hxx;hm;inl;inc;xsd</Extensions>
+    </Filter>
+    <Filter Include="Resource Files">
+      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
+      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
+    </Filter>
+    <Filter Include="AnaBase">
+      <UniqueIdentifier>{907d06f8-b1f3-4839-a827-86edde4ef49c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Test">
+      <UniqueIdentifier>{23d3dc2e-2c90-47ab-ba82-8ad692e2497f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Filter">
+      <UniqueIdentifier>{12dfedc8-00eb-4529-91ab-bb6fd83dabef}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Misc">
+      <UniqueIdentifier>{92e479a1-8599-49c9-a00a-5c791c58d299}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="ReadMe.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="stdafx.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="targetver.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="AnaBase\FileStream.h">
+      <Filter>AnaBase</Filter>
+    </ClInclude>
+    <ClInclude Include="AnaBase\AnaBaseType.h">
+      <Filter>AnaBase</Filter>
+    </ClInclude>
+    <ClInclude Include="AnaBase\RoundBuf.h">
+      <Filter>AnaBase</Filter>
+    </ClInclude>
+    <ClInclude Include="Filter\TsPackageFilter.h">
+      <Filter>Filter</Filter>
+    </ClInclude>
+    <ClInclude Include="AnaBase\AnaBase.h">
+      <Filter>AnaBase</Filter>
+    </ClInclude>
+    <ClInclude Include="Test\UT_main.h">
+      <Filter>Test</Filter>
+    </ClInclude>
+    <ClInclude Include="Filter\PidFilter.h">
+      <Filter>Filter</Filter>
+    </ClInclude>
+    <ClInclude Include="Misc\RecordFile.h">
+      <Filter>Misc</Filter>
+    </ClInclude>
+    <ClInclude Include="Filter\FilterBase.h">
+      <Filter>Filter</Filter>
+    </ClInclude>
+    <ClInclude Include="Filter\FilterParams.h">
+      <Filter>Filter</Filter>
+    </ClInclude>
+    <ClInclude Include="Filter\SectionFilter.h">
+      <Filter>Filter</Filter>
+    </ClInclude>
+    <ClInclude Include="Misc\DbgManager.h">
+      <Filter>Misc</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="stdafx.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="SpecAna2020.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="AnaBase\FileStream.cpp">
+      <Filter>AnaBase</Filter>
+    </ClCompile>
+    <ClCompile Include="AnaBase\RoundBuf.cpp">
+      <Filter>AnaBase</Filter>
+    </ClCompile>
+    <ClCompile Include="Test\UTFilter.cpp">
+      <Filter>Test</Filter>
+    </ClCompile>
+    <ClCompile Include="Filter\TsPackageFilter.cpp">
+      <Filter>Filter</Filter>
+    </ClCompile>
+    <ClCompile Include="Test\UT_main.cpp">
+      <Filter>Test</Filter>
+    </ClCompile>
+    <ClCompile Include="Filter\PidFilter.cpp">
+      <Filter>Filter</Filter>
+    </ClCompile>
+    <ClCompile Include="Misc\RecordFile.cpp">
+      <Filter>Misc</Filter>
+    </ClCompile>
+    <ClCompile Include="Test\UTMisc.cpp">
+      <Filter>Test</Filter>
+    </ClCompile>
+    <ClCompile Include="Filter\SectionFilter.cpp">
+      <Filter>Filter</Filter>
+    </ClCompile>
+    <ClCompile Include="Misc\DbgManager.cpp">
+      <Filter>Misc</Filter>
+    </ClCompile>
+  </ItemGroup>
+</Project>

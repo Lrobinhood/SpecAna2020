@@ -24,6 +24,7 @@ void UT_TsPackageFilter_2_PidFilter();
 
 void UT_PidFilter_2_SectionFilter();
 
+void UT_PidFilter_2_SectionFilter_2_Parser();
 //---E: UTFilter---/
 
 

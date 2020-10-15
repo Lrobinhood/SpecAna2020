@@ -21,6 +21,7 @@ typedef enum tagSectionRCvState
     EN_SECTION_RCV_OTHER_PACK        
 }EN_SECTION_RCV_STATE;
 
+typedef void (*PARSER_FUNC)(u8 *pBuf, u32 u32DataLen);
 
 class CSectionFilter:public CFilterBase{
 
@@ -35,6 +36,9 @@ public:
     void SetFilterTableId(u8 u8TableID);
 
     u32 GetSectionData(u8 *pBuf, u32 u32BufLen);
+
+	void SetParserFunc(PARSER_FUNC pfuncParser) { m_funcParser = pfuncParser; }
+	void ResetParserFunc() { m_funcParser= NULL; }
     
         
 protected:
@@ -53,6 +57,8 @@ private:
     u32 m_u32RcvSectionLen;
 
 	UN_DRV_TSPU_FILTER_CFG m_unFilter_Cfg;
+
+	PARSER_FUNC m_funcParser;
 };
 
 

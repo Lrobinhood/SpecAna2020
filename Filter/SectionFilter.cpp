@@ -35,6 +35,8 @@ CSectionFilter::CSectionFilter()
 	m_u32CurSectionLen 	= 0;
     m_u32RcvSectionLen	= 0;
 
+	m_funcParser = NULL;
+
 }
 
 
@@ -166,8 +168,16 @@ void CSectionFilter::ReceiveTSPack(u8 *pu8Data, size_t szStreamOffset)
 
 		// Temp code 2020.10.15
 		u8 buf[M_SECTION_BUF_LEN];
+		u32 datalen = 0;
 
-		GetSectionData(buf, M_SECTION_BUF_LEN);
+		datalen = GetSectionData(buf, M_SECTION_BUF_LEN);
+
+		if (NULL != m_funcParser)
+		{
+			m_funcParser(buf, datalen);
+
+			DisableFilter();
+		}
 		
 		
 		/*

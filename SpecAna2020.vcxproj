@@ -86,6 +86,14 @@
     <ClInclude Include="Filter\TsPackageFilter.h" />
     <ClInclude Include="Misc\DbgManager.h" />
     <ClInclude Include="Misc\RecordFile.h" />
+    <ClInclude Include="Parser\DescriptorBase.h" />
+    <ClInclude Include="Parser\field.h" />
+    <ClInclude Include="Parser\FieldBase.h" />
+    <ClInclude Include="Parser\FieldContainer.h" />
+    <ClInclude Include="Parser\MultipleStringStructureBase.h" />
+    <ClInclude Include="Parser\ParseAssit.h" />
+    <ClInclude Include="Parser\ParserFunc.h" />
+    <ClInclude Include="Parser\typedef.h" />
     <ClInclude Include="stdafx.h" />
     <ClInclude Include="targetver.h" />
     <ClInclude Include="Test\UT_main.h" />
@@ -98,6 +106,13 @@
     <ClCompile Include="Filter\TsPackageFilter.cpp" />
     <ClCompile Include="Misc\DbgManager.cpp" />
     <ClCompile Include="Misc\RecordFile.cpp" />
+    <ClCompile Include="Parser\DescriptorBase.cpp" />
+    <ClCompile Include="Parser\field.cpp" />
+    <ClCompile Include="Parser\FieldBase.cpp" />
+    <ClCompile Include="Parser\FieldContainer.cpp" />
+    <ClCompile Include="Parser\MultipleStringStructureBase.cpp" />
+    <ClCompile Include="Parser\ParseAssit.cpp" />
+    <ClCompile Include="Parser\ParserFunc.cpp" />
     <ClCompile Include="SpecAna2020.cpp" />
     <ClCompile Include="stdafx.cpp">
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Create</PrecompiledHeader>

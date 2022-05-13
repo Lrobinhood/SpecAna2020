@@ -20,13 +20,14 @@ class CPidFilter:public CFilterBase
 public:
     CPidFilter();
     ~CPidFilter();
-        
-	void SetPid(u16 u16PID);
+
+    void SetPid(u16 u16PID);
+    u16 GetPid() { return m_u16PID; }
 
     void ReceiveTSPack(u8 *pu8Data, size_t szStreamOffset = 0);
 
-    void RegisterNotify(u32 Key, CFilterBase &Filter);
-    void UnRegisterNotify(u32 Key);
+    void RegisterNotify(void *Key, CFilterBase &Filter);
+    void UnRegisterNotify(void *Key);
 
 	/*
     void ConnectSectionFilter(u32 u32SectionFilterHandle);
@@ -38,19 +39,20 @@ public:
     void SetDataNotifyFunc(TSPU_DATA_NOTIFY_FUNC pfnNotify, void *pvTspuDataQueue);
     TSPU_DATA_NOTIFY_FUNC GetDataNotifyFunc();
     */
-    
+
 protected:
     //CSectionFilter* TransformSectionFilter2Pointer(u32 u32SectionFilterHandle);
-     
+
     void notify(u8 *pBuf, size_t szOffset);
-    
+
 private:
-    u32 m_u32PIDHandle;
+    void* m_pvPIDHandle;
+	//u64 m_u64PIDHandle;
 
     u16 m_u16PID;
     u32 m_u32PidPackageCount;
 
-    map<u32, CFilterBase &> m_mapNotify;
+    map<void *, CFilterBase &> m_mapNotify;
 
 
 	/*

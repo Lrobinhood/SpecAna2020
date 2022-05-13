@@ -6,7 +6,7 @@
 	date:	2020-09-23
 
 ******************************************************************************************/
-#include "stdafx.h"
+//#include "stdafx.h"
 
 #include <stdio.h>
 #include <memory.h>

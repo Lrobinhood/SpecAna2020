@@ -7,49 +7,51 @@
 
 ******************************************************************************************/
 
-#include "stdafx.h"
+//#include "stdafx.h"
+#include <stdio.h>
 
 #include "RecordFile.h"
 
-CRecordFile::CRecordFile(char *pstrFileName)
+CRecordFile::CRecordFile(const char *pstrFileName)
 {
-	int ret = 0;
+    int ret = 0;
 
-	m_fp = NULL;
-	
-	ret = openfile(pstrFileName);
+    m_fp = NULL;
+
+    ret = openfile(pstrFileName);
 }
 
 
 
 CRecordFile::~CRecordFile()
 {
-	if (NULL != m_fp)
-		fclose(m_fp);
+    if (NULL != m_fp)
+        fclose(m_fp);
 }
 
 
 
-void CRecordFile::RecordOneLog(char *psLog)
+void CRecordFile::RecordOneLog(const char *psLog)
 {
-	fprintf(m_fp, "%s \n", psLog);
+    fprintf(m_fp, "%s \n", psLog);
 }
 
 
 
-int CRecordFile::openfile(char *pstrFileName)
+int CRecordFile::openfile(const char *pstrFileName)
 {
-	fopen_s(&m_fp, pstrFileName, "w");
-	if (NULL == m_fp)
-	{
-		printf("\n Open File:%s Failed! \n", pstrFileName);
+    m_fp = fopen(pstrFileName, "w");
 
-		return -1;
-	}
+    if (NULL == m_fp)
+    {
+        printf("\n Open File:%s Failed! \n", pstrFileName);
 
-	printf("\n Open File:%s Success! \n", pstrFileName);
+        return -1;
+    }
 
-	return 0;
+    printf("\n Open File:%s Success! \n", pstrFileName);
+
+    return 0;
 }
 
 

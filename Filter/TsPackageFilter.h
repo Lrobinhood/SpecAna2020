@@ -23,7 +23,7 @@ typedef enum tag_en_Filter_State{
 
 class CTsPackageFilter{
 public:
-	CTsPackageFilter() {m_pRoundBuf = NULL; m_State = EN_TSPACKAGE_FILTER_STATE_NOT_SYNC; m_u32Progress = 0;}
+	CTsPackageFilter() {m_pRoundBuf = NULL; m_State = EN_TSPACKAGE_FILTER_STATE_NOT_SYNC; m_Progress = 0.0;}
 	~CTsPackageFilter(){;}
 
 	//EN_DRAG_DATA_RESULT GetOneTsPackage(u8 *pBuf, u32 u32PackagelLen = 188);
@@ -32,8 +32,9 @@ public:
 	u32 GetTsPackage(u8 *pBuf, u32 u32PackageLen = 188);
     u32 GetTsPackageEx(u8 *pBuf, size_t &szStreamOffset, u32 u32PackageLen = 188);
 
-    void RegisterNotify(u32 Key, CFilterBase &Filter);
+    void RegisterNotify(u32 Key, CFilterBase *pFilter);
     void UnRegisterNotify(u32 Key);
+    CFilterBase* FindFilter(u32 key);
 
 protected:
 	// 同步包头
@@ -45,9 +46,9 @@ private:
 	CRoundBuf *m_pRoundBuf;
 	EN_TSPACKAGE_FILTER_STATE m_State;
 
-    map<u32, CFilterBase &> m_mapNotify;
+    map<u32, CFilterBase *> m_mapNotify;
 
-    u32 m_u32Progress;
+    double m_Progress;
 };
 
 #endif // #ifndef __TSPACKAGE_FILTER_H__

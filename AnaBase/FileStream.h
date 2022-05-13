@@ -13,11 +13,11 @@
 class CFileStream{
 public:
 	CFileStream();
-	CFileStream(char *pstrFileName);
+	CFileStream(const char *pstrFileName);
 
    	~CFileStream();
 
-	int OpenFile(char *pstrFileName);
+	int OpenFile(const char *pstrFileName);
 
 	int ReadData(u8 *pBuf, u32 u32ReadLen);
 
@@ -30,11 +30,11 @@ public:
     long GetFileLen() {return m_FileLen;}
 
 protected:
-	int openfile(char *pstrFileName);
+	int openfile(const char *pstrFileName);
 
 private:
 	FILE *m_fp;
-    
+
     long m_FileLen;
 };
 

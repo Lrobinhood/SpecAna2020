@@ -13,11 +13,11 @@
 
 
 #ifndef TRUE
-#define TRUE	1
+#define TRUE    1
 #endif
 
 #ifndef FALSE
-#define FALSE	0
+#define FALSE   0
 #endif
 
 #define BIT7 (0x1 << 7)
@@ -32,6 +32,19 @@
 typedef unsigned char u8;
 typedef unsigned short u16;
 typedef unsigned int u32;
+typedef long u64;
+
+typedef u8 BOOLEAN;
+
+
+
+#ifndef   NULL
+	#ifdef   __cplusplus
+		#define   NULL      0
+	#else
+		#define   NULL      ((void   *)0)
+	#endif
+#endif //   NULL
 
 
 
@@ -91,7 +104,7 @@ typedef struct tagTspuDataMsg{
     u8  *pu8Data;
 }TSPU_DATA_MSG_STRU;
 
-#endif 
+#endif
 
 
 #endif // end "#ifndef __ANABASE_TYPE_H__¡°

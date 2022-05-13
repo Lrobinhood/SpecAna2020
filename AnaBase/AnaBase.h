@@ -9,6 +9,7 @@
 
 #ifndef __ANABASE_H__
 #define __ANABASE_H__
+#include <stdio.h>
 
 #include "AnaBaseType.h"
 #include "FileStream.h"

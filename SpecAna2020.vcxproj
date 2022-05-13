@@ -20,12 +20,14 @@
     <ConfigurationType>Application</ConfigurationType>
     <UseDebugLibraries>true</UseDebugLibraries>
     <CharacterSet>Unicode</CharacterSet>
+    <PlatformToolset>v142</PlatformToolset>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
     <ConfigurationType>Application</ConfigurationType>
     <UseDebugLibraries>false</UseDebugLibraries>
     <WholeProgramOptimization>true</WholeProgramOptimization>
     <CharacterSet>Unicode</CharacterSet>
+    <PlatformToolset>v142</PlatformToolset>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
   <ImportGroup Label="ExtensionSettings">
@@ -45,10 +47,11 @@
   </PropertyGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <ClCompile>
-      <PrecompiledHeader>Use</PrecompiledHeader>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
       <WarningLevel>Level3</WarningLevel>
       <Optimization>Disabled</Optimization>
       <PreprocessorDefinitions>WIN32;_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessToFile>false</PreprocessToFile>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
@@ -81,45 +84,59 @@
     <ClInclude Include="AnaBase\RoundBuf.h" />
     <ClInclude Include="Filter\FilterBase.h" />
     <ClInclude Include="Filter\FilterParams.h" />
+    <ClInclude Include="Filter\PesFilter.h" />
     <ClInclude Include="Filter\PidFilter.h" />
     <ClInclude Include="Filter\SectionFilter.h" />
     <ClInclude Include="Filter\TsPackageFilter.h" />
     <ClInclude Include="Misc\DbgManager.h" />
     <ClInclude Include="Misc\RecordFile.h" />
+    <ClInclude Include="Parser\Descriptor.h" />
     <ClInclude Include="Parser\DescriptorBase.h" />
+    <ClInclude Include="Parser\DescriptorFactory.h" />
     <ClInclude Include="Parser\field.h" />
     <ClInclude Include="Parser\FieldBase.h" />
     <ClInclude Include="Parser\FieldContainer.h" />
+    <ClInclude Include="Parser\FieldFactory.h" />
     <ClInclude Include="Parser\MultipleStringStructureBase.h" />
     <ClInclude Include="Parser\ParseAssit.h" />
     <ClInclude Include="Parser\ParserFunc.h" />
     <ClInclude Include="Parser\typedef.h" />
     <ClInclude Include="stdafx.h" />
     <ClInclude Include="targetver.h" />
+    <ClInclude Include="Test\audio\cert_log.h" />
+    <ClInclude Include="Test\audio\dbgfuncs.h" />
+    <ClInclude Include="Test\audio\dvb_bitparser.h" />
+    <ClInclude Include="Test\audio\techtype.h" />
+    <ClInclude Include="Test\audio\type_for_win32.h" />
     <ClInclude Include="Test\UT_main.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="AnaBase\FileStream.cpp" />
     <ClCompile Include="AnaBase\RoundBuf.cpp" />
+    <ClCompile Include="Filter\PesFilter.cpp" />
     <ClCompile Include="Filter\PidFilter.cpp" />
     <ClCompile Include="Filter\SectionFilter.cpp" />
     <ClCompile Include="Filter\TsPackageFilter.cpp" />
     <ClCompile Include="Misc\DbgManager.cpp" />
     <ClCompile Include="Misc\RecordFile.cpp" />
+    <ClCompile Include="Parser\Descriptor.cpp" />
     <ClCompile Include="Parser\DescriptorBase.cpp" />
+    <ClCompile Include="Parser\DescriptorFactory.cpp" />
     <ClCompile Include="Parser\field.cpp" />
     <ClCompile Include="Parser\FieldBase.cpp" />
     <ClCompile Include="Parser\FieldContainer.cpp" />
+    <ClCompile Include="Parser\FieldFactory.cpp" />
     <ClCompile Include="Parser\MultipleStringStructureBase.cpp" />
     <ClCompile Include="Parser\ParseAssit.cpp" />
     <ClCompile Include="Parser\ParserFunc.cpp" />
     <ClCompile Include="SpecAna2020.cpp" />
-    <ClCompile Include="stdafx.cpp">
-      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Create</PrecompiledHeader>
-      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Create</PrecompiledHeader>
-    </ClCompile>
+    <ClCompile Include="Test\audio\aud_ac4.cpp" />
+    <ClCompile Include="Test\audio\cert_log.c" />
+    <ClCompile Include="Test\audio\dvb_bitparser.c" />
     <ClCompile Include="Test\UTFilter.cpp" />
     <ClCompile Include="Test\UTMisc.cpp" />
+    <ClCompile Include="Test\UTParser.cpp" />
+    <ClCompile Include="Test\UTPesFilter.cpp" />
     <ClCompile Include="Test\UT_main.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />

@@ -10,18 +10,20 @@
 #ifndef __RECORD_FILE_H__
 #define __RECORD_FILE_H__
 
+#include <stdio.h>
+
 class CRecordFile{
 public:
-	CRecordFile(char *pstrFileName);
+	CRecordFile(const char *pstrFileName);
 
    	~CRecordFile();
 
-	void RecordOneLog(char *psLog);
+	void RecordOneLog(const char *psLog);
 
 
 
 protected:
-	int openfile(char *pstrFileName);
+	int openfile(const char *pstrFileName);
 
 private:
 	FILE *m_fp;

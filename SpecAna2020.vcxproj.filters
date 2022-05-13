@@ -28,6 +28,9 @@
     <Filter Include="Parser">
       <UniqueIdentifier>{9059af3b-c392-4dd3-80ed-69107ee66357}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Test\audio">
+      <UniqueIdentifier>{1f4526ab-5ab1-40d8-8f54-ae1cce553550}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <None Include="ReadMe.txt" />
@@ -99,11 +102,35 @@
     <ClInclude Include="Parser\ParserFunc.h">
       <Filter>Parser</Filter>
     </ClInclude>
+    <ClInclude Include="Filter\PesFilter.h">
+      <Filter>Filter</Filter>
+    </ClInclude>
+    <ClInclude Include="Test\audio\dvb_bitparser.h">
+      <Filter>Test\audio</Filter>
+    </ClInclude>
+    <ClInclude Include="Test\audio\dbgfuncs.h">
+      <Filter>Test\audio</Filter>
+    </ClInclude>
+    <ClInclude Include="Test\audio\techtype.h">
+      <Filter>Test\audio</Filter>
+    </ClInclude>
+    <ClInclude Include="Test\audio\cert_log.h">
+      <Filter>Test\audio</Filter>
+    </ClInclude>
+    <ClInclude Include="Test\audio\type_for_win32.h">
+      <Filter>Test\audio</Filter>
+    </ClInclude>
+    <ClInclude Include="Parser\FieldFactory.h">
+      <Filter>Parser</Filter>
+    </ClInclude>
+    <ClInclude Include="Parser\DescriptorFactory.h">
+      <Filter>Parser</Filter>
+    </ClInclude>
+    <ClInclude Include="Parser\Descriptor.h">
+      <Filter>Parser</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="stdafx.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
     <ClCompile Include="SpecAna2020.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
@@ -156,6 +183,33 @@
       <Filter>Parser</Filter>
     </ClCompile>
     <ClCompile Include="Parser\ParserFunc.cpp">
+      <Filter>Parser</Filter>
+    </ClCompile>
+    <ClCompile Include="Filter\PesFilter.cpp">
+      <Filter>Filter</Filter>
+    </ClCompile>
+    <ClCompile Include="Test\UTPesFilter.cpp">
+      <Filter>Test</Filter>
+    </ClCompile>
+    <ClCompile Include="Test\audio\aud_ac4.cpp">
+      <Filter>Test\audio</Filter>
+    </ClCompile>
+    <ClCompile Include="Test\audio\dvb_bitparser.c">
+      <Filter>Test\audio</Filter>
+    </ClCompile>
+    <ClCompile Include="Test\audio\cert_log.c">
+      <Filter>Test\audio</Filter>
+    </ClCompile>
+    <ClCompile Include="Parser\FieldFactory.cpp">
+      <Filter>Parser</Filter>
+    </ClCompile>
+    <ClCompile Include="Test\UTParser.cpp">
+      <Filter>Test</Filter>
+    </ClCompile>
+    <ClCompile Include="Parser\DescriptorFactory.cpp">
+      <Filter>Parser</Filter>
+    </ClCompile>
+    <ClCompile Include="Parser\Descriptor.cpp">
       <Filter>Parser</Filter>
     </ClCompile>
   </ItemGroup>

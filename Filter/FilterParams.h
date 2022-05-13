@@ -11,7 +11,7 @@
 #define __SECTIONFILTER_PARAMS_H__
 
 
-#define DRV_TSPU_FILT_SECTION_PATTERN_LENGTH                (12)    /*!< The maximum length of Section filter Match & Mask pattern  */
+#define DRV_TSPU_FILT_SECTION_PATTERN_LENGTH                (5)    /*!< The maximum length of Section filter Match & Mask pattern  */
 #define DRV_TSPU_FILT_PES_PATTERN_LENGTH                    (4)     /*!< The maximum length of PES filter Match & Mask pattern      */
 #define DRV_TSPU_FILT_ES_PATTERN_LENGTH                     (4)     /*!< The maximum length of ES filter Match & Mask pattern       */
 #define DRV_TSPU_DESC_DVB_CSA_CW_LENGTH                     (8)     /*!< The length of DVB CSA Control Word                         */
@@ -115,22 +115,22 @@ typedef union
     transport_packet()
     {
             sync_byte                                   8 bslbf         BYTE 0
-            
+
             transport_error_indicator                   1 bslbf         BYTE 1, BYTE 2
             payload_unit_start_indicator                1 bslbf
             transport_priority                          1 bslbf
             PID                                         13 uimsbf
-            
+
             transport_scrambling_control                2 bslbf         BYTE 3
             adaptation_field_control                    2 bslbf
             continuity_counter                          4 uimsbf
-            
+
             if(adaptation_field_control = = '10' || adaptation_field_control = = '11')
             {
                 adaptation_field()
             }
-            
-            if(adaptation_field_control = = '01' || adaptation_field_control = = '00') 
+
+            if(adaptation_field_control = = '01' || adaptation_field_control = = '00')
             {
                 for (i = 0; i < N; i++)
                 {
@@ -140,7 +140,7 @@ typedef union
     }
 
 
-    adaptation_field() 
+    adaptation_field()
     {
         adaptation_field_length                         8 uimsbf
 
